@@ -1,0 +1,126 @@
+
+.form-control {
+
+	border: 1px solid @input-border-color;
+	border-radius: 0px;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	color: @base-color;
+	padding: 15px 20px;
+
+	&::placeholder {
+		font-size: 18px;
+		font-family: 'Georgia', 'Times New Roman', serif;
+		color: @base-color;
+	}
+
+	&--large {
+		height: 50px;
+		font-size: 18px;
+	}
+
+	&--noborder {
+		border: 0px none;
+	}
+}
+
+.btn {
+	
+	border-radius: 0px;
+	font-family: 'Arial', sans-serif;
+
+	&--bold {
+		font-weight: 700!important;
+	}
+
+	&--light {
+		color: @base-color;
+		background-image: linear-gradient(180deg, #fcfdfd, #d9e3e8);
+		&:hover {
+			background-image: linear-gradient(180deg, lighten(#fcfdfd,5%), lighten(#d9e3e8,5%));
+		}
+		&:active {
+			background-image: linear-gradient(0deg, darken(#fcfdfd,5%), darken(#d9e3e8,5%));
+		}
+	}
+
+	&--dark {
+		background-image: linear-gradient(180deg, #60b5e9, #39a2e3);
+		border-color: #569cc6 #4290bf #2d83b8;
+		&:hover {
+			background-image: linear-gradient(180deg, lighten(#60b5e9,5%), lighten(#39a2e3,5%));
+		}
+		&:active {
+			background-image: linear-gradient(0deg, darken(#60b5e9,5%), darken(#39a2e3,5%));
+		}
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			color: white;
+		}
+	}
+	&--darkangle {
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			border-style: solid;
+			position: absolute;
+		}
+	}
+	&.btn--middle {
+		&.btn--darkangle {
+			&:before {
+				border-width: 19px 0px 19px 12px;
+				border-color: #4491c0 #4491c0 #4491c0 transparent;
+				z-index: 1;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+			}
+			&:after {
+				border-width: 20px 0px 20px 12px;
+				border-color: white white white transparent;
+				z-index: 10;
+				top: -1px;
+				right: -1px;
+				bottom: -1px;
+			}
+		}
+	}
+	&--large {
+		height: 50px;
+		padding-top: 14px; 
+		padding-bottom: 14px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	&--middle {
+		height: 40px;
+		padding-top: 11px; 
+		padding-bottom: 11px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	&--noborder {
+		border: 0px none;
+	}
+
+	&--back {
+		&:before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			margin: 5px 0px 0px -15px;
+			width: 7px;
+			height: 7px;
+			border-width: 0px 0px 3px 3px;
+			border-color: @base-color;
+			border-style: solid;
+			transform: rotate(+45deg) skewX(10deg) skewY(10deg);
+		}
+	}
+	
+}
