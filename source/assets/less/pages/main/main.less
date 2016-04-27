@@ -1,0 +1,255 @@
+
+.page__title {
+	font-size: 70px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	text-align: center;
+	letter-spacing: -0.02em;
+}
+
+.graph {
+	background: transparent url(../img/graph-bg.png) repeat-x 50% 50%;
+	height: 280px;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		background: transparent url(../img/graph.png) no-repeat 50% 50%;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	}
+}
+
+.support {
+	margin-bottom: 100px;
+	&__title {
+		font-size: 35px;
+		font-weight: 500;
+	}
+	&__content {
+		font-family: 'ralewaylight', sans-serif;
+		font-size: 25px;
+		max-width: 820px;
+		margin: 0px auto 100px;
+	}
+	&__item {
+		position: relative;
+		padding-left: 85px;
+		font-size: 15px;
+		color: @gray-color;
+		&-icons {
+			position: absolute;
+			top: 12px;
+			left: 0px;
+		}
+		&-title {
+			font-size: 35px;
+			font-weight: 800;
+			color: @base-color;
+			display: block;
+			line-height: 1.0;
+			margin-bottom: 20px;
+		}
+		&-content {
+			max-width: 190px;
+		}
+	}
+}
+
+.wprocess {
+	margin-bottom: 113px;
+	&__title {
+		&:extend(h1);
+		margin-bottom: 50px;
+	}
+	&__subtitle {
+		&:extend(h5);
+		margin-bottom: 50px;
+	}
+	&__content,
+	&__subtitle {
+		max-width: 860px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__item {
+		max-width: 240px;
+		margin: 0px auto 50px;
+		text-align: center;
+		&-title {
+			
+		}
+		&-video {
+			&-frame {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin-bottom: 10px;
+				&:after,
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+				}
+				&:after {
+					background-color: white;
+					left: 50%;
+					top: 50%;
+					margin: -22px 0px 0px -22px;
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+					box-shadow: 0px 1px 1px 10000px rgba(0,0,0,0.2);
+					z-index: 1;
+				}
+				&:before {
+					left: 50%;
+					top: 50%;
+					margin: -10px 0px 0px -5px;
+					border-width: 11px 17px;
+					border-style: solid;
+					border-color: transparent transparent transparent @lt-gray-color;
+					transition: border-color ease-in-out 0.1s;
+					z-index: 10;
+				}
+			}
+			.decorate {
+				border-bottom-style: dashed;
+				font-size: 15px;
+				font-weight: 800;
+				transition: color ease-in-out 0.1s;
+			}
+			&:hover {
+				.wprocess__item-video-frame {
+					&:before {
+						border-color: transparent transparent transparent @red-color;
+					}
+				}
+				.decorate {
+					color: @red-color;
+				}
+
+			}
+		}
+	}
+	&__content {
+		font-family: 'ralewaylight', sans-serif;
+		font-size: 25px;
+		margin-bottom: 70px;
+		.icons {
+			margin-right: 18px;
+		}
+	}
+	&__shadows {
+		position: relative;
+		height: 260px;
+		width: 100%;
+		img {
+			position: absolute;
+			left: 50%;
+			bottom: 0px;
+			margin-left: -590px;
+		}
+	}
+}
+
+.sampless {
+	margin-bottom: 96px;
+	&__title {
+		&:extend(h1);
+		margin-bottom: 40px;
+	}
+	&__content,
+	&__subtitle {
+		max-width: 780px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	&__subtitle {
+		&:extend(h5);
+		font-weight: 500;
+		line-height: 1.28;
+		margin-bottom: 27px;
+	}
+	&__content {
+		font-family: 'ralewaylight', sans-serif;
+		font-size: 25px;
+	}
+	&__content {
+		margin-bottom: 60px;
+	}
+	&__item + &__item {
+		margin-top: 27px;
+	}
+	&__item {
+		position: relative;
+		padding-left: 50px;
+		&-icon {
+			position: absolute;
+			top: 15px;
+			left: 15px;
+		}
+		&-title {
+			font-size: 25px;
+			line-height: 1.40;
+			font-weight: 800;
+			display: block;
+		}
+		&-content {
+			font-size: 12px;
+			a {
+				color: @gray-color;
+			}
+		}
+	}
+}
+
+.feedback {
+	&__form {
+		background-color: white;
+		border-width: 0px 0px 3px;
+		border-style: solid;
+		border-color: transparent transparent #e6ebec;
+		border-radius: 5px;
+		position: relative;
+		padding-top: 74px;
+		padding-bottom: 74px;
+		box-shadow: 0px 10px 50px 0px rgba(0,50,65,0.20);
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+		}
+		&:before {
+			border-width: 10px;
+			border-style: solid;
+			border-color: @form-border;
+			border-radius: 3px;
+		}
+		&:after {
+			background: transparent url(../img/form-bg.png) repeat 10px 0px;
+		}
+		&-title {
+			&:extend(h1);
+			line-height: 1.15;
+			margin-bottom: 26px;
+		}
+		&-required {
+			display: block;
+			color: @red-color;
+			margin-top: 23px;
+		}
+	}
+	&__fieldset {
+		position: relative;
+		z-index: 10;
+	}	
+}

@@ -1,46 +1,23 @@
-header.header.header--index
+header.header
 	.container
-		.row.header__first-line
-			.col-xs-38
-				a.header__href(href="basket.html")
-					i.icons.icons--basket
-					span.decorate Корзина
-			.col-xs-10
-				.clearfix
-					a.header__href.pull-left(href="#")
-						i.icons.icons--lock
-						span.decorate Войти
-					a.header__href.pull-right(href="#")
-						i.icons.icons--personal
-						span.decorate Зарегистрироваться
-		.row.header__second-line
-			.col-xs-38
-				a#logo(href="main.html")
-					img(src="assets/img/diss-logo-full.png")
-				span.header__slogan 
-					|Электронная библиотека диссертаций,
-					|защищенных в России за последние 20 лет
-			.col-xs-10
-				.header__reviews
-					p
-					|Всё отлично! От момента принятия
-					|решения об оплате и скачивании
-					|до скачивания прошло 30 минут,
-					|из них 20 минут я разбирался как
-					|и что делать
-					i.icons.icons--smile.m-l-5
-					p
-					|В. Фролов
-					span.header__reviews-space.p-l-10.p-r-10 &middot;
-					a(href="")
-						|Все отзывы
-		.row.header__third-line
-			.col-xs-38.p-r-20
-				form.header__search
-					.row
-						.col-xs-42.p-r-0
-							input.form-control.form-control--large.form-control--noborder(type="text",placeholder="Введите слово для поиска ... ")
-						.col-xs-6.p-l-0
-							button.btn.btn--large.btn--bold.btn--light.btn--noborder.width-100(type="submit") Найти
-			.col-xs-10
-				a.btn.btn--large.btn--bold.btn--dark.btn--noborder.width-100(type="submit",href="catalog.html") Перейти в каталог
+		.row
+			.col-xs-16
+				a(id="spacebox-logo", href="#") 
+			.col-xs-24
+				ul.nav.header__nav.nav-justified
+					li
+						a(href="#")
+							span.decorate
+								| Ответы на вопросы
+					li
+						a(href="#")
+							span.decorate
+								| Отзывы
+					li
+						a(href="#")
+							span.decorate
+								| Контакты
+			.col-xs-8
+				a.btn.btn--red.btn--md(href="")
+					i.icons.icons--application
+					| Оставить заявку

@@ -1,83 +1,218 @@
 extends ./layouts/layout-index
 pageTitle="Главная страница"
 block content
-	.container.advantages
-		.advantages__title
-			| Преимущества
-		.row
-			.col-xs-55
-				.advantages__item
-					i.icons.icons--adv-money
-					h3.advantages__item-name
-						| Низкая цена
-					.advantages__item-anons
-						p
-							| Всего 249
-							span.rub.m-l-2.m-r-5 a
-							| за скачивание
-							| одной диссертации
-			.col-xs-55
-				.advantages__item
-					i.icons.icons--adv-preview
-					h3.advantages__item-name
-						| Предпросмотр
-					.advantages__item-anons
-						p
-							| Бесплатный просмотр
-							| первых 20 страниц
-							| любой диссертации
-			.col-xs-55
-				.advantages__item
-					i.icons.icons--adv-cabinet
-					h3.advantages__item-name
-						| Личный кабинет
-					.advantages__item-anons
-						p
-							| Личный кабинет
-							| с историей всех ваших покупок и возможность
-							| их повторного скачивания бесплатно и в любое время
-			.col-xs-55
-				.advantages__item
-					i.icons.icons--adv-is-free
-					h3.advantages__item-name
-						| Одна бесплатно
-					.advantages__item-anons
-						p
-							| Скачать 1 диссертацию
-							| бесплатно по акции. 
-							br
-							a(href="#")
-								span.decorate
-									| Подробнее
-			.col-xs-55
-				.advantages__item
-					i.icons.icons--adv-sale
-					h3.advantages__item-name
-						| Скидки
-					.advantages__item-anons
-						p
-							| 75 диссертаций за 4900 a
-							| по акции.
-							a.m-l-5(href="#")
-								span.decorate
-									| Подробнее
-	.warranty
+	.container
+		h1.page__title
+			| Техническая поддержка — развиваем ваши сайты!
+	.graph
+	.support
 		.container
+			h2.support__title.text-center
+				| Мы не любим фразу «Поддержка сайта». Мы их развиваем.  
+			.support__content.text-center
+				p
+					| Вы ставите задачи по дизайну, просите изменить порядок вывода информации, жалуетесь на низкую конверсию с сайта.
+				p
+					| Мы думаем и предлагаем решения, для реализации которых может потребоваться внести изменения в дизайн, верстку, программный код и контент сайта.
+				p
+					| Вместо длинного текста «подробнее об услуге» мы создали 
+					a(href="#")
+						| FAQ с ответами на вопросы
 			.row
-				.col-xs-12
-					h2.warranty__title
-						| Гарантии
-					i.icons.icons--warranty
-					p
-						| Мы возращаем деньги на карточку или баланс сотового, если возникли проблемы
-						| с файлом диссертации
-				.col-xs-26
-
-				.col-xs-10
-					h2.warranty__title
-						| &nbsp;
-					i.icons.icons--rating
-					p
-						| Высокий рейтинг
-						| в платежной системе onpay, к которой мы
-						| подключены с 2010 г.
+				.col-xs-16
+					.support__item
+						i.icons.icons--works-hour.support__item-icons
+						strong.support__item-title
+							| 1 час = 
+							br
+							| 2 000 
+							span.rub
+								| c
+						.support__item-content
+							p
+								| Мы предлагаем почасовую оплату наших работ. 1 час - 2000 
+								span.rub
+									| a
+				.col-xs-16
+					.support__item
+						i.icons.icons--accounting.support__item-icons
+						strong.support__item-title
+							| Точный 
+							br
+							| учет
+						.support__item-content
+							p
+								| Для учета времени используем тайм-трекер toggl.com 
+				.col-xs-16
+					.support__item
+						i.icons.icons--per-month.support__item-icons
+						strong.support__item-title
+							| 1 расчет 
+							br
+							| в месяц
+						.support__item-content
+							p
+								| Оплата в конце месяца на основании отработанных часов
+	.wprocess
+		.container
+			h2.wprocess__title.text-center
+				| Рабочий процесс
+			h5.wprocess__subtitle.text-center
+				| Обработку ваших заявок мы ведем в  системе управления проектами basecamp от легендарной компании  37signal
+			.row
+				.col-xs-16
+					.wprocess__item
+						a.wprocess__item-video(href="")
+							span.wprocess__item-video-frame
+								img(src="assets/img/pages/wprocess/img-1.png")
+							span.decorate
+								| Знакомство с системой.
+								br
+								| Диалог
+				.col-xs-16
+					.wprocess__item
+						a.wprocess__item-video(href="")
+							span.wprocess__item-video-frame
+								img(src="assets/img/pages/wprocess/img-1.png")
+							span.decorate
+								| Создание списка
+								br
+								| заданий
+				.col-xs-16
+					.wprocess__item
+						a.wprocess__item-video(href="")
+							span.wprocess__item-video-frame
+								img(src="assets/img/pages/wprocess/img-1.png")
+							span.decorate
+								| Просмотр событий
+			.wprocess__content.text-center
+				p
+					| Учет потраченного времени ведем в toggl и в конце месяца формируем итоговый отчет. Мы расшарим для вас оперативный отчет и вы сможете в реальном времени видет затраты времени на ваш проект.
+				a.wprocess__content-pdf(href="")
+					i.icons.icons--pdf
+					span.decorate
+						| Скачать пример отчета
+			.wprocess__shadows
+				img(src="assets/img/pages/toggl/toggl.png")
+	.sampless
+		.container
+			h2.sampless__title.text-center
+				| Рабочий процесс
+			h5.sampless__subtitle.text-center
+				| Обработку ваших заявок мы ведем в  системе управления проектами basecamp от легендарной компании  37signal
+			.sampless__content.text-center
+				P
+					| Вы можете им написать и спросить о нашем сотрудничестве. Мы уверены, что они будут рады нас похвалить.
+			.row
+				.col-xs-16
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/ma-ma.png")
+						strong.sampless__item-title
+							| ma-ma.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Мусоргский Модест Петрович
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/sudar.png")
+						strong.sampless__item-title
+							| sudar.su
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Могучая Панфиловна
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/ella-kirillova.png")
+						strong.sampless__item-title
+							| ellakirillova.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Мусоргский Модест Петрович
+				.col-xs-16
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/shpl.png")
+						strong.sampless__item-title
+							| shpl.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Морозов Константин Константинович
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/unikum-nou.png")
+						strong.sampless__item-title
+							| unikum-nou.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Могучая Анна Михайловна
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/elvek.png")
+						strong.sampless__item-title
+							| elvek.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Добронравова Элла Панфиловна
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/kontakt-keramika.png")
+						strong.sampless__item-title
+							| kontakt-keramika.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Карамзин Олег Васильевич
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/jitnitsa.png")
+						strong.sampless__item-title
+							| jitnitsa.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Мусоргский Модест Петрович
+				.col-xs-16
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/aselibrary.png")
+						strong.sampless__item-title
+							| aselibrary.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Свиридов Павел Алексеевич
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/poletx.png")
+						strong.sampless__item-title
+							| poletx.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Васильев Денис Витальевич
+					.sampless__item
+						img.sampless__item-icon(src="assets/img/pages/clients/sportdepo.png")
+						strong.sampless__item-title
+							| sportdepo.ru
+						.sampless__item-content
+							a(href="")
+								span.decorate
+									| Могучая Анна Михайловна
+	.feedback.m-b-100
+		.container
+			form.feedback__form
+				fieldset.feedback__fieldset
+					h2.feedback__form-title.text-center
+						| Отправить заявку
+						br
+						| на развитие сайта
+					.row
+						.col-xs-16.col-xs-offset-4.p-l-15.p-r-40
+							input.form-control.m-b-20(type="text", placeholder="Имя ...")
+							input.form-control.m-b-20(type="text", placeholder="Телефон ...")
+							input.form-control(type="text", placeholder="Эл. почта ...")
+						.col-xs-24.p-l-5.p-r-20.pull-left
+							textarea.form-control
+								| Вчера узнал о вашей компании, посоветовал друг. У меня проблема с тем что никто не заказывает товары с сайта, хотя в поиске я на первом месте. Надеюсь на ваш профессионализм, мне очень нужно решить эту проблему
+					.text-center.m-t-60
+						button.btn.btn-default.btn--md.p-l-45.p-r-45(type="submit",disabled="disabled")
+							| Отправить
+						span.feedback__form-required
+							| Необходимо заполнить поле: телефон
