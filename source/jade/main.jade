@@ -8,7 +8,9 @@ block content
 	.support
 		.container
 			h2.support__title.text-center
-				| Мы не любим фразу «Поддержка сайта». Мы их развиваем.  
+				| Мы не любим фразу «Поддержка сайта».
+				br
+				| Мы их развиваем.  
 			.support__content.text-center
 				p
 					| Вы ставите задачи по дизайну, просите изменить порядок вывода информации, жалуетесь на низкую конверсию с сайта.
@@ -18,77 +20,79 @@ block content
 					| Вместо длинного текста «подробнее об услуге» мы создали 
 					a(href="#")
 						| FAQ с ответами на вопросы
-			.row
-				.col-xs-16
-					.support__item
-						i.icons.icons--works-hour.support__item-icons
-						strong.support__item-title
-							| 1 час = 
-							br
-							| 2 000 
-							span.rub
-								| c
-						.support__item-content
-							p
-								| Мы предлагаем почасовую оплату наших работ. 1 час - 2000 
+			.support__items
+				.row
+					.col-xs-16
+						.support__item
+							i.icons.icons--works-hour.support__item-icons
+							strong.support__item-title
+								| 1 час = 
+								br
+								| 2 000 
 								span.rub
-									| a
-				.col-xs-16
-					.support__item
-						i.icons.icons--accounting.support__item-icons
-						strong.support__item-title
-							| Точный 
-							br
-							| учет
-						.support__item-content
-							p
-								| Для учета времени используем тайм-трекер toggl.com 
-				.col-xs-16
-					.support__item
-						i.icons.icons--per-month.support__item-icons
-						strong.support__item-title
-							| 1 расчет 
-							br
-							| в месяц
-						.support__item-content
-							p
-								| Оплата в конце месяца на основании отработанных часов
+									| c
+							.support__item-content
+								p
+									| Мы предлагаем почасовую оплату наших работ. 1 час - 2000 
+									span.rub
+										| a
+					.col-xs-16
+						.support__item
+							i.icons.icons--accounting.support__item-icons
+							strong.support__item-title
+								| Точный 
+								br
+								| учет
+							.support__item-content
+								p
+									| Для учета времени используем тайм-трекер toggl.com 
+					.col-xs-16
+						.support__item
+							i.icons.icons--per-month.support__item-icons
+							strong.support__item-title
+								| 1 расчет 
+								br
+								| в месяц
+							.support__item-content
+								p
+									| Оплата в конце месяца на основании отработанных часов
 	.wprocess
 		.container
 			h2.wprocess__title.text-center
 				| Рабочий процесс
 			h5.wprocess__subtitle.text-center
 				| Обработку ваших заявок мы ведем в  системе управления проектами basecamp от легендарной компании  37signal
-			.row
-				.col-xs-16
-					.wprocess__item
-						a.wprocess__item-video(href="")
-							span.wprocess__item-video-frame
-								img(src="assets/img/pages/wprocess/img-1.png")
-							span.decorate
-								| Знакомство с системой.
-								br
-								| Диалог
-				.col-xs-16
-					.wprocess__item
-						a.wprocess__item-video(href="")
-							span.wprocess__item-video-frame
-								img(src="assets/img/pages/wprocess/img-1.png")
-							span.decorate
-								| Создание списка
-								br
-								| заданий
-				.col-xs-16
-					.wprocess__item
-						a.wprocess__item-video(href="")
-							span.wprocess__item-video-frame
-								img(src="assets/img/pages/wprocess/img-1.png")
-							span.decorate
-								| Просмотр событий
+			.wprocess__items
+				.row
+					.col-xs-16
+						.wprocess__item
+							a.wprocess__item-video(href="")
+								span.wprocess__item-video-frame
+									img(src="assets/img/pages/wprocess/img-1.png")
+								span.decorate
+									| Знакомство с системой.
+									br
+									| Диалог
+					.col-xs-16
+						.wprocess__item
+							a.wprocess__item-video(href="")
+								span.wprocess__item-video-frame
+									img(src="assets/img/pages/wprocess/img-1.png")
+								span.decorate
+									| Создание списка
+									br
+									| заданий
+					.col-xs-16
+						.wprocess__item
+							a.wprocess__item-video(href="")
+								span.wprocess__item-video-frame
+									img(src="assets/img/pages/wprocess/img-1.png")
+								span.decorate
+									| Просмотр событий
 			.wprocess__content.text-center
 				p
 					| Учет потраченного времени ведем в toggl и в конце месяца формируем итоговый отчет. Мы расшарим для вас оперативный отчет и вы сможете в реальном времени видет затраты времени на ваш проект.
-				a.wprocess__content-pdf(href="")
+				a.wprocess__content-pdf.m-t-15(href="")
 					i.icons.icons--pdf
 					span.decorate
 						| Скачать пример отчета
