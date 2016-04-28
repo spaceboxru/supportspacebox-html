@@ -20,11 +20,12 @@
     "html5shiv": "~3.7.3",
     "respond": "1.4.2",
     "selectivizr": "1.0.2",
-	"placeholders": "~4.0.1"
+    "placeholders": "~4.0.1"
   },
   "private": true,
   "devDependencies": {
     "fancyBox": "~2.1.5",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "jquery-validation": "jquery.validate#^1.13.0"
   }
 }

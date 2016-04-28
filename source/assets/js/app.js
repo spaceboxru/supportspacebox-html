@@ -42,4 +42,48 @@
 	    
 	}
 
+jQuery(function($) {
+
+	/**
+	* Scroll to element
+	*/
+	$(document).on('click','a[data-target]', function(event) {
+		event.preventDefault();
+		var $target = $("#" + this.getAttribute('data-target'));
+		if($target.size())
+			$('html, body').animate({
+				scrollTop: $target.offset().top
+			}, 2000);
+	});
+
+	/**
+	* Form validate
+	*/
+	(function() {
+		var $form = $('#form'),
+			$inputs = $('input[type="text"],textarea', $form),
+			$submit = $('button[type="submit"]', $form);
+
+			$form.validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					}
+				},
+				errorPlacement: function(error,element) {
+					return true;
+				}
+			});
+
+			$inputs.on('keyup blur', function () { // fires on every keyup & blur
+				if ($form.valid()) {                   // checks form for validity
+					$submit.prop('disabled', false);        // enables button
+				} else {
+					$submit.prop('disabled', 'disabled');   // disables button
+				}
+			});
+
+	}());
+});
 

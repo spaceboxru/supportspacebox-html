@@ -39,12 +39,14 @@ var PATHS = {
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
-    'bower_components/what-input/what-input.js',
+    // 'bower_components/what-input/what-input.js',
 
     'bower_components/bootstrap/dist/js/bootstrap.js',
 
     'bower_components/placeholders/dist/placeholders.jquery.js',
     'bower_components/fancyBox/source/jquery.fancybox.js',
+    'bower_components/jquery-validation/dist/jquery.validate.js',
+
 	'source/assets/js/vendor/qtip/jquery.qtip.js',
 	
   ],
@@ -127,7 +129,8 @@ gulp.task('less', function () {
 	ignore: [
 		new RegExp('^meta\..*'),
 		new RegExp('^\.is-.*'),
-		new RegExp('^\.fancybox.*')
+		new RegExp('^\.fancybox.*'),
+		new RegExp('\.error.*')
 	]
 	}));
 
