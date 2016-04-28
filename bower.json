@@ -24,6 +24,7 @@
   },
   "private": true,
   "devDependencies": {
+    "fancyBox": "~2.1.5",
     "bootstrap": "^3.3.6"
   }
 }

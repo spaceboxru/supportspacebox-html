@@ -44,7 +44,7 @@ var PATHS = {
     'bower_components/bootstrap/dist/js/bootstrap.js',
 
     'bower_components/placeholders/dist/placeholders.jquery.js',
-
+    'bower_components/fancyBox/source/jquery.fancybox.js',
 	'source/assets/js/vendor/qtip/jquery.qtip.js',
 	
   ],
@@ -126,7 +126,8 @@ gulp.task('less', function () {
 	//html: ['compile/**/*.html'],
 	ignore: [
 		new RegExp('^meta\..*'),
-		new RegExp('^\.is-.*')
+		new RegExp('^\.is-.*'),
+		new RegExp('^\.fancybox.*')
 	]
 	}));
 
