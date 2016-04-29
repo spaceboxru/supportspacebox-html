@@ -47,14 +47,20 @@ jQuery(function($) {
 	/**
 	* Scroll to element
 	*/
-	$(document).on('click','a[data-target]', function(event) {
-		event.preventDefault();
-		var $target = $("#" + this.getAttribute('data-target'));
-		if($target.size())
-			$('html, body').animate({
-				scrollTop: $target.offset().top
-			}, 2000);
-	});
+	(function() {
+		var $a = $('a[data-target]');
+
+		$(document).on('click','a[data-target]', function(event) {
+			event.preventDefault();
+			var $target = $("#" + this.getAttribute('data-target'));
+			$a.removeClass('active');
+			$(this).addClass('active');
+			if($target.size())
+				$('html, body').animate({
+					scrollTop: $target.offset().top
+				}, 1500);
+		});
+	}());
 
 	/**
 	* Form validate
@@ -62,13 +68,13 @@ jQuery(function($) {
 	(function() {
 		var $form = $('#form'),
 			$inputs = $('input[type="text"],textarea', $form),
-			$submit = $('button[type="submit"]', $form);
+			$submit = $('button[type="submit"]', $form),
+			$required = $('.feedback__form-required', $form);
 
 			$form.validate({
 				rules: {
-					email: {
-						required: true,
-						email: true
+					phone: {
+						required: true
 					}
 				},
 				errorPlacement: function(error,element) {
@@ -79,11 +85,20 @@ jQuery(function($) {
 			$inputs.on('keyup blur', function () { // fires on every keyup & blur
 				if ($form.valid()) {                   // checks form for validity
 					$submit.prop('disabled', false);        // enables button
+					$required.addClass('hide');
 				} else {
 					$submit.prop('disabled', 'disabled');   // disables button
+					$required.removeClass('hide');
 				}
 			});
 
+			$submit.on('click', function() {
+
+				alert("");
+				
+			});
+
 	}());
+
 });
 

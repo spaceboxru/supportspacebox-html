@@ -32,6 +32,9 @@ var PATHS = {
   css: [
 	'source/assets/less/vendor/foundation-email/foundation.css'
   ],
+  docs: [
+	'source/doc/**/*'
+  ],
   less: [
 	// 'bower_components/foundation-sites/scss',
 	'source/assets/less/app.less',
@@ -94,6 +97,11 @@ gulp.task('copy:css', function() {
 		.pipe(gulp.dest('compile/assets/css/foundation-email'));
 });
 
+gulp.task('copy:docs', function() {
+	gulp.src(PATHS.docs)
+		.pipe(gulp.dest('compile/doc'));
+});
+
 // Copy page templates into finished HTML files
 
 gulp.task('pages', function() {
@@ -101,7 +109,8 @@ gulp.task('pages', function() {
 
 	gulp.src('source/jade/*.jade')
 		.pipe(jade({
-			locals: YOUR_LOCALS
+			locals: YOUR_LOCALS,
+			pretty: true
 		}))
 		.pipe(gulp.dest('compile'))
 });
@@ -147,7 +156,7 @@ gulp.task('less', function () {
 				.pipe($.autoprefixer({
 					browsers: COMPATIBILITY
 				}))
-				.pipe(uncss)
+				//.pipe(uncss)
 				.pipe(minifycss)
 				.pipe($.if(!isProduction, $.sourcemaps.write()))
 				.pipe(gulp.dest('compile/assets/css'));
@@ -201,7 +210,7 @@ gulp.task('images', function() {
 // Build the "compile" folder by running all of the above tasks
 gulp.task('build', function(done) {
 
-	sequence('clean', ['pages', 'less', 'javascript', 'javascriptapp', 'sprite', 'images', 'copy'], 'styleguide', done);
+	sequence('clean', ['pages', 'less', 'javascript', 'javascriptapp', 'sprite', 'images', 'copy', 'copy:css', 'copy:docs'], 'styleguide', done);
 
 });
 
@@ -220,9 +229,11 @@ gulp.task('default', ['build', 'server'], function() {
 
 	gulp.watch(PATHS.css, ['copy:css', browser.reload]);
 
+	gulp.watch(PATHS.css, ['copy:docs', browser.reload]);
+
 	gulp.watch(['source/jade/**/*.jade'], ['pages', browser.reload]);
 	gulp.watch(['source/jade/**/*.jade'], ['pages:reset', browser.reload]);
-	gulp.watch(['source/assets/less/**/*.less'], ['less', 'copy:css', browser.reload]);
+	gulp.watch(['source/assets/less/**/*.less'], ['less', 'copy:css', 'copy:docs', browser.reload]);
 	gulp.watch(['source/assets/js/**/*.js'], ['javascript','javascriptapp', browser.reload]);
 	gulp.watch(['source/assets/img/**/*'], ['images', 'sprite', browser.reload]);
 	gulp.watch(['source/templates/styleguide/**'], ['styleguide', browser.reload]);

@@ -1,0 +1,28 @@
+
+.nav {
+	&__right {
+		li {
+			margin-bottom: 15px;
+			line-height: 1.36;
+			a {
+				padding: 0px;
+				&,
+				&:hover,
+				&:active,
+				&:focus {
+					background: transparent;
+				}
+				.decorate {
+					border-width: 0px 0px 1px;
+					border-style: dashed;
+				}
+				&.active {
+					color: @red-color;
+					.decorate {
+						border-bottom-color: transparent;
+					}
+				}
+			}
+		}
+	}	
+}

@@ -2,7 +2,7 @@ extends ./layouts/layout-index
 pageTitle="Главная страница"
 block content
 	.container
-		h1.page__title
+		h1.page__title.text-center
 			| Техническая поддержка — развиваем ваши сайты!
 	.graph
 	.support
@@ -92,7 +92,7 @@ block content
 			.wprocess__content.text-center
 				p
 					| Учет потраченного времени ведем в toggl и в конце месяца формируем итоговый отчет. Мы расшарим для вас оперативный отчет и вы сможете в реальном времени видет затраты времени на ваш проект.
-				a.wprocess__content-pdf.m-t-15(href="")
+				a.wprocess__content-pdf.m-t-15(href="doc/Toggl_time_entries_2016-02-01_to_2016-02-29.pdf",target="_blank")
 					i.icons.icons--pdf
 					span.decorate
 						| Скачать пример отчета
@@ -216,7 +216,7 @@ block content
 							textarea.form-control(name="content")
 								| Вчера узнал о вашей компании, посоветовал друг. У меня проблема с тем что никто не заказывает товары с сайта, хотя в поиске я на первом месте. Надеюсь на ваш профессионализм, мне очень нужно решить эту проблему
 					.text-center.m-t-60
-						button.btn.btn-default.btn--md.p-l-45.p-r-45(type="submit",disabled="disabled")
+						button.btn.btn--md.btn--red.p-l-45.p-r-45(type="submit",disabled="disabled")
 							| Отправить
-						span.feedback__form-required
+						span.feedback__form-required.hide
 							| Необходимо заполнить поле: телефон

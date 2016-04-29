@@ -2,203 +2,83 @@ extends ./layouts/layout-index
 pageTitle="Главная страница"
 block content
 	.container
-		h1.page__title
-			| Техническая поддержка — развиваем ваши сайты!
-	.graph
-	.support
+		h1.page__title.text-left.m-b-45
+			| Ответы на вопросы
+	.faq
 		.container
-			h2.support__title.text-center
-				| Мы не любим фразу «Поддержка сайта».
-				br
-				| Мы их развиваем.  
-			.support__content.text-center
-				p
-					| Вы ставите задачи по дизайну, просите изменить порядок вывода информации, жалуетесь на низкую конверсию с сайта.
-				p
-					| Мы думаем и предлагаем решения, для реализации которых может потребоваться внести изменения в дизайн, верстку, программный код и контент сайта.
-				p
-					| Вместо длинного текста «подробнее об услуге» мы создали 
-					a(href="faq.html")
-						| FAQ с ответами на вопросы
-			.support__items
-				.row
-					.col-xs-16
-						.support__item
-							i.icons.icons--works-hour.support__item-icons
-							strong.support__item-title
-								| 1 час = 
-								br
-								| 2 000 
-								span.rub
-									| c
-							.support__item-content
-								p
-									| Мы предлагаем почасовую оплату наших работ. 1 час - 2000 
-									span.rub
-										| a
-					.col-xs-16
-						.support__item
-							i.icons.icons--accounting.support__item-icons
-							strong.support__item-title
-								| Точный 
-								br
-								| учет
-							.support__item-content
-								p
-									| Для учета времени используем тайм-трекер toggl.com 
-					.col-xs-16
-						.support__item
-							i.icons.icons--per-month.support__item-icons
-							strong.support__item-title
-								| 1 расчет 
-								br
-								| в месяц
-							.support__item-content
-								p
-									| Оплата в конце месяца на основании отработанных часов
-	.wprocess
-		.container
-			h2.wprocess__title.text-center
-				| Рабочий процесс
-			h5.wprocess__subtitle.text-center
-				| Обработку ваших заявок мы ведем в  системе управления проектами basecamp от легендарной компании  37signal
-			.wprocess__items
-				.row
-					.col-xs-16
-						.wprocess__item
-							a(href="http://www.youtube.com/embed/-61n6t6tQ04?enablejsapi=1&wmode=opaque",class="wprocess__item-video fancybox fancybox.iframe")
-								span.wprocess__item-video-frame
-									img(src="http://img.youtube.com/vi/-61n6t6tQ04/0.jpg",width="240",height="170")
-								span.decorate
-									| Знакомство с системой.
-									br
-									| Диалог
-					.col-xs-16
-						.wprocess__item
-							a(href="http://www.youtube.com/embed/8UmLMdXFhXA?enablejsapi=1&wmode=opaque",class="wprocess__item-video fancybox fancybox.iframe")
-								span.wprocess__item-video-frame
-									img(src="http://img.youtube.com/vi/8UmLMdXFhXA/0.jpg",width="240",height="170")
-								span.decorate
-									| Создание списка
-									br
-									| заданий
-					.col-xs-16
-						.wprocess__item
-							a(href="http://www.youtube.com/embed/NNGFXVeJ_I0?enablejsapi=1&wmode=opaque",class="wprocess__item-video fancybox fancybox.iframe")
-								span.wprocess__item-video-frame
-									img(src="http://img.youtube.com/vi/NNGFXVeJ_I0/0.jpg",width="240",height="170")
-								span.decorate
-									| Просмотр событий
-			.wprocess__content.text-center
-				p
-					| Учет потраченного времени ведем в toggl и в конце месяца формируем итоговый отчет. Мы расшарим для вас оперативный отчет и вы сможете в реальном времени видет затраты времени на ваш проект.
-				a.wprocess__content-pdf.m-t-15(href="")
-					i.icons.icons--pdf
-					span.decorate
-						| Скачать пример отчета
-			.wprocess__shadows
-				img(src="assets/img/pages/toggl/toggl.png")
-	.sampless
-		.container
-			h2.sampless__title.text-center
-				| Рабочий процесс
-			h5.sampless__subtitle.text-center
-				| Обработку ваших заявок мы ведем в  системе управления проектами basecamp от легендарной компании  37signal
-			.sampless__content.text-center
-				P
-					| Вы можете им написать и спросить о нашем сотрудничестве. Мы уверены, что они будут рады нас похвалить.
 			.row
-				.col-xs-16
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/ma-ma.png")
-						strong.sampless__item-title
-							| ma-ma.ru
-						.sampless__item-content
-							a(href="")
+				.col-xs-36
+					span.hline.hline--size-4.m-b-45(id="faq-1")
+					.faq__item
+						h2.faq__item-title
+							span
+								| 1. 
+							| Предварителная оценка затрат
+						.faq__item-content
+							p
+								| Чтобы вам было удобнее прогнозировать затраты мы получив от вас список задач по сайту делаем предварительную оценку по времени его исполнении и бюджету.
+						span.hline.m-b-35.m-t-40(id="faq-2")
+					.faq__item
+						h2.faq__item-title
+							span
+								| 2. 
+							| В процессе изменения сайта у вас появились новые идеи, которые лучше чем те которые сейчас мы реализуем 
+						.faq__item-content
+							p
+								| Получив от вас обновленное задание мы делаем экспресс оценку, из которой будет понятно как новые идеи меняют бюджет сроки. И мы изменим рабочий план, если вы примете решения что лучше идти по новому планы работ.
+						span.hline.m-b-35.m-t-40(id="faq-3")
+					.faq__item
+						h2.faq__item-title
+							span
+								| 3. 							
+							| Предварителная оценка затрат
+						.faq__item-content
+							p
+								| Если это наш брак, то мы бесплатно его переделываем и дадим вам скидку в 25% на ранее озвученный бюджет.
+							p
+								| Иначе мы проводим с вами минипереговоры и согласовываем бюджет на переделки. Обычно обе стороны идут на уступки, так как плохой результат может быть следствие ошибок в постановке задачи и ошибок в ее исполнении.
+						span.hline.m-b-35.m-t-40(id="faq-4")
+					.faq__item
+						h2.faq__item-title
+							span
+								| 4. 
+							| Сео продвижение сайта
+						.faq__item-content
+							p
+								| Мы не специалисты в вопросах продвижения, но мы можем выполнить настройку сайта на основе советом Яндекс и Гугл по настройке сайта. Так как данные советы однозначно понятны и их результат виден на страницах сайта. 
+						span.hline.m-b-35.m-t-40(id="faq-5")
+					.faq__item
+						h2.faq__item-title
+							span
+								| 5. 
+							| Безопасность и обновление сайта.
+						.faq__item-content
+							p
+								| Если ваш хостинг позволяет, то мы в своей работе использует git - распределенная система контроля версий. Все правки вашего сайта делаем на нашей тестовой площадке и при помощи git репозиторий обновляем ваш сайт. Это дает возможность быстро обновлять ваш сайт новые наработками и сохранять его постоянную работоспособность. 
+						
+				.col-xs-8.col-xs-offset-4
+					span.hline.hline--size-4.m-b-45
+					.nav.nav__right.js-nav__right
+						li
+							a(href="",data-target="faq-1")
 								span.decorate
-									| Мусоргский Модест Петрович
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/sudar.png")
-						strong.sampless__item-title
-							| sudar.su
-						.sampless__item-content
-							a(href="")
+									| Предварителная оценка затрат
+						li
+							a(href="",data-target="faq-2")
 								span.decorate
-									| Могучая Панфиловна
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/ella-kirillova.png")
-						strong.sampless__item-title
-							| ellakirillova.ru
-						.sampless__item-content
-							a(href="")
+									| В процессе изменения сайта у вас появились новые идеи, которые лучше чем тем которые сейчас мы реализуем. 
+						li
+							a(href="",data-target="faq-3")
 								span.decorate
-									| Мусоргский Модест Петрович
-				.col-xs-16
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/shpl.png")
-						strong.sampless__item-title
-							| shpl.ru
-						.sampless__item-content
-							a(href="")
+									| Результат изменений вам не нравится.
+						li
+							a(href="",data-target="faq-4")
 								span.decorate
-									| Морозов Константин Константинович
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/unikum-nou.png")
-						strong.sampless__item-title
-							| unikum-nou.ru
-						.sampless__item-content
-							a(href="")
+									| Сео продвижение сайта
+						li
+							a(href="",data-target="faq-5")
 								span.decorate
-									| Могучая Анна Михайловна
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/elvek.png")
-						strong.sampless__item-title
-							| elvek.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Добронравова Элла Панфиловна
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/kontakt-keramika.png")
-						strong.sampless__item-title
-							| kontakt-keramika.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Карамзин Олег Васильевич
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/jitnitsa.png")
-						strong.sampless__item-title
-							| jitnitsa.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Мусоргский Модест Петрович
-				.col-xs-16
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/aselibrary.png")
-						strong.sampless__item-title
-							| aselibrary.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Свиридов Павел Алексеевич
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/poletx.png")
-						strong.sampless__item-title
-							| poletx.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Васильев Денис Витальевич
-					.sampless__item
-						img.sampless__item-icon(src="assets/img/pages/clients/sportdepo.png")
-						strong.sampless__item-title
-							| sportdepo.ru
-						.sampless__item-content
-							a(href="")
-								span.decorate
-									| Могучая Анна Михайловна
+									| Безопасность и обновление сайта.
 	.feedback.m-b-100
 		.container
 			form.feedback__form(id="form")
@@ -216,7 +96,7 @@ block content
 							textarea.form-control(name="content")
 								| Вчера узнал о вашей компании, посоветовал друг. У меня проблема с тем что никто не заказывает товары с сайта, хотя в поиске я на первом месте. Надеюсь на ваш профессионализм, мне очень нужно решить эту проблему
 					.text-center.m-t-60
-						button.btn.btn-default.btn--md.p-l-45.p-r-45(type="submit",disabled="disabled")
+						button.btn.btn--md.btn--red.p-l-45.p-r-45(type="submit",disabled="disabled")
 							| Отправить
-						span.feedback__form-required
+						span.feedback__form-required.hide
 							| Необходимо заполнить поле: телефон
