@@ -146,9 +146,11 @@
   </div>
   <div class="feedback m-b-100">
     <div class="container">
-      <form id="form" class="feedback__form">
+      <form id="form" action="sendmail.php" method="post" class="feedback__form">
         <fieldset class="feedback__fieldset">
           <h2 class="feedback__form-title text-center">Отправить заявку<br>на развитие сайта</h2>
+          <h3 class="feedback__form-subtitle text-center ok hide">Заявка отправлена</h3>
+          <h3 class="feedback__form-subtitle text-center error hide">Ошибка отправки, повторите позже</h3>
           <div class="row">
             <div class="col-xs-16 col-xs-offset-4 p-l-15 p-r-40">
               <input type="text" name="name" placeholder="Имя ..." class="form-control m-b-20">

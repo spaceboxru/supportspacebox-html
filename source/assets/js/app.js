@@ -69,7 +69,9 @@ jQuery(function($) {
 		var $form = $('#form'),
 			$inputs = $('input[type="text"],textarea', $form),
 			$submit = $('button[type="submit"]', $form),
-			$required = $('.feedback__form-required', $form);
+			$required = $('.feedback__form-required', $form),
+			$ok = $('.ok', $form),
+			$error = $('.error', $form);
 
 			$form.validate({
 				rules: {
@@ -92,9 +94,29 @@ jQuery(function($) {
 				}
 			});
 
-			$submit.on('click', function() {
+			$form.on('submit', function(e) {
+				e.preventDefault();
+				
+				var $this = $(this);
+				$this.addClass('load');
 
-				alert("");
+				$.ajax({
+					type: "POST",
+					url: $this.attr('action'),
+					data: $this.serialize(), // serializes the form's elements.
+					dataType: 'json',
+					success: function(data)
+					{
+						if(data.error) {
+							$ok.addClass("hide");
+							$error.removeClass("hide");
+						} else {
+							$ok.removeClass("hide");
+							$error.addClass("hide");
+						}
+						$this.removeClass('load');
+					}
+				});
 				
 			});
 

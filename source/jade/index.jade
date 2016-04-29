@@ -199,24 +199,3 @@ block content
 							a(href="")
 								span.decorate
 									| Могучая Анна Михайловна
-	.feedback.m-b-100
-		.container
-			form.feedback__form(id="form")
-				fieldset.feedback__fieldset
-					h2.feedback__form-title.text-center
-						| Отправить заявку
-						br
-						| на развитие сайта
-					.row
-						.col-xs-16.col-xs-offset-4.p-l-15.p-r-40
-							input.form-control.m-b-20(type="text", name="name", placeholder="Имя ...")
-							input.form-control.m-b-20(type="text", name="phone", placeholder="Телефон ...")
-							input.form-control(type="text", name="email", placeholder="Эл. почта ...")
-						.col-xs-24.p-l-5.p-r-20.pull-left
-							textarea.form-control(name="content")
-								| Вчера узнал о вашей компании, посоветовал друг. У меня проблема с тем что никто не заказывает товары с сайта, хотя в поиске я на первом месте. Надеюсь на ваш профессионализм, мне очень нужно решить эту проблему
-					.text-center.m-t-60
-						button.btn.btn--md.btn--red.p-l-45.p-r-45(type="submit",disabled="disabled")
-							| Отправить
-						span.feedback__form-required.hide
-							| Необходимо заполнить поле: телефон
